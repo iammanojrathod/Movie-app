@@ -140,9 +140,26 @@ main{
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 619px){
     .movie{
         width: 450px;
+    }
+    .footer h3{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 460px){
+    .movie{
+        width: 450px;
+    }
+    .movie_info h3{
+        font-size: 13px;
+    }
+    .movie_info span{
+        width: 35px;
+        height: 20px;
+        font-size: 12px;
     }
     .footer h3{
         font-size: 10px;
