@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 50px 100px;
+    background: #101010;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.heading{
+    color: #fff;
+    font-size: 45px;
+    font-family: inherit;
+}
+form{
+    width: 400px;
+    min-width: 300px;
+    height: 50px;
+}
+form .search{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    padding: 10px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #efefef;
+    border-radius: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.movie{
+    width: 200px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.movie img{
+    width: 100%;
+    object-fit: cover;
+}
+.movie_info{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+.movie_info h3{
+    font-family: inherit;
+}
+.movie_info span{
+    background: #efefef;
+    font-weight: bold;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    /* line-height: 25px; */
+    padding: 3px;
+    border-radius: 5px;
+}
+.movie_info span.green{
+    color: green;
+}
+.movie_info span.orange{
+    color: orange;
+}
+.movie_info span.red{
+    color: red;
+}
+.plot{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    color: #101010;
+    padding: 15px;
+    max-height: 80%;
+    overflow: auto;
+    transform: translateY(101%);
+    transition: all 0.3s ease-in;
+}
+.plot h3{
+    margin-bottom: 10px;
+}
+.movie:hover .plot{
+    transform: translateY(0);
+}
+.footer{
+    color: #fff;
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+}
+.footer h3{
+    letter-spacing: 2px;
+}
+.footer a{
+    color: red;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px){
+    form{
+        width: 300px;
+    }
+}
+
+@media (max-width: 850px){
+    header{
+        flex-direction: column;
+    }
+    form{
+        width: 70%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 650px){
+    .movie_info h3{
+        font-size: 16px;
+    }
+}
