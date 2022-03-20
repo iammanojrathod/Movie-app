@@ -19,7 +19,7 @@ header{
     margin-bottom: 50px;
 }
 .heading{
-    color: #fff;
+    color: red;
     font-size: 45px;
     font-family: inherit;
 }
@@ -137,5 +137,14 @@ main{
 @media (max-width: 650px){
     .movie_info h3{
         font-size: 16px;
+    }
+}
+
+@media (max-width: 550px){
+    .movie{
+        width: 450px;
+    }
+    .footer h3{
+        font-size: 15px;
     }
 }
