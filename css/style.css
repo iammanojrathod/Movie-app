@@ -8,9 +8,9 @@
 }
 body{
     width: 100%;
-    height: 100vh;
     padding: 50px 100px;
     background: #101010;
+    position: relative;
 }
 header{
     display: flex;
@@ -39,11 +39,38 @@ form .search{
     border: 2px solid #efefef;
     border-radius: 10px;
 }
+.tag_container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 50px auto;
+}
+.tag{
+    background-color: red;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tag.highlight{
+    background-color: #fff;
+    color: red;
+}
 main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 50px;
+}
+.no_results{
+    color: #fff;
 }
 .movie{
     width: 200px;
@@ -90,11 +117,12 @@ main{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #fff;
-    color: #101010;
+    background: #efefef;
+    color: #010101;
     padding: 15px;
     max-height: 80%;
     overflow: auto;
+    backdrop-filter: blur(10px);
     transform: translateY(101%);
     transition: all 0.3s ease-in;
 }
@@ -104,18 +132,48 @@ main{
 .movie:hover .plot{
     transform: translateY(0);
 }
-.footer{
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    margin-top: 50px;
-    padding: 10px;
-    text-align: center;
 }
-.footer h3{
-    letter-spacing: 2px;
+.page, .home{
+    background-color: red;
+    padding: 10px 20px;
+    margin: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.footer a{
+.page.disabled{
+    cursor: not-allowed;
+    color: grey;
+    background-color: transparent;
+    border: 2px solid rgb(209, 59, 59);
+}
+
+.page.disabled:hover{
+    cursor: not-allowed;
+    color: grey;
+    background-color: transparent;
+    border: 2px solid rgb(209, 59, 59);
+}
+.page:hover{
     color: red;
-    text-decoration: none;
+    background-color: #fff;
+}
+.current{
+    background-color: transparent;
+    padding: 10px 15px;
+    border-radius: 50%;
+    border: 2px solid red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.current:hover{
+    background-color: red;
 }
 
 /* Media queries ------------------------------ */
@@ -154,9 +212,6 @@ main{
     }
     .movie{
         width: 450px;
-    }
-    .footer h3{
-        font-size: 10px;
     }
 }
 
