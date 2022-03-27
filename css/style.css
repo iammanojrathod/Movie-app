@@ -40,7 +40,7 @@ form .search{
     border-radius: 10px;
 }
 .tag_container{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,6 +54,7 @@ form .search{
     border-radius: 50px;
     margin: 5px;
     display: inline-block;
+    font-size: 15px;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -146,6 +147,12 @@ main{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.home{
+    width: 100px;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+}
 .page.disabled{
     cursor: not-allowed;
     color: grey;
@@ -193,7 +200,18 @@ main{
         margin-top: 30px;
     }
     .movie{
-        width: 205px;
+        width: 250px;
+    }
+    .tag{
+        font-size: 12px;
+    }
+}
+@media (max-width: 732px){
+    .movie{
+        width: 210px;
+    }
+    .movie_info h3{
+        font-size: 16px;
     }
 }
 
@@ -206,18 +224,21 @@ main{
     }
 }
 
-@media (max-width: 629px){
+@media (max-width: 633px){
     body{
-        padding: 50px 70px;
+        padding: 50px 20px;
     }
     .movie{
         width: 450px;
+    }
+    .tag{
+        font-size: 10px;
     }
 }
 
 @media (max-width: 460px){
     body{
-        padding: 50px 50px;
+        padding: 50px 25px;
     }
     .movie_info h3{
         font-size: 13px;
