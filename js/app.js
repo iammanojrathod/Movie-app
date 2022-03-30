@@ -215,3 +215,20 @@ home.addEventListener('click', () => {
   getMovies(API_URL);
 })
 
+//Arrow Scroll
+const arrow = document.querySelector('.arrow_icon');
+window.onscroll = function () {
+  let top = window.scrollY;
+
+  if (top >= 200) {
+    //arrow icon
+    arrow.classList.add("arrow_active");
+  } else {
+    //arrow icon
+    arrow.classList.remove("arrow_active");
+  }
+};
+
+arrow.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
