@@ -220,7 +220,7 @@ const arrow = document.querySelector('.arrow_icon');
 window.onscroll = function () {
   let top = window.scrollY;
 
-  if (top >= 200) {
+  if (top >= 500) {
     //arrow icon
     arrow.classList.add("arrow_active");
   } else {
