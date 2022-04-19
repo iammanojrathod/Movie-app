@@ -232,3 +232,11 @@ window.onscroll = function () {
 arrow.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+//heading 
+const headingBtn = document.querySelector('.heading');
+
+headingBtn.addEventListener('click', () => {
+  getMovies(API_URL);
+  // window.scrollTo({ top: 0, behavior: "smooth" });
+})
